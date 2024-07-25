@@ -1,21 +1,26 @@
-export default function Nav(){
+import {Link, NavLink, useLocation } from 'react-router-dom';
+
+function Nav(){
+    //const currentPage=useLocation().pathname;
 
     return(
         <section className="d-flex flex-row">
             <nav >
                 <div>
-                <a href="#">Portfolio</a>
+                <a href="./pages/Portfolio" >Portfolio</a>
                 </div>
                 <div>
-                <a href="#">About</a>
+                {/* <Link to="/About" className={currentPage === '/'? 'nav-link active':'nav-link'}>About</Link> */}
                 </div>
                 <div>
-                <a href="#">Contact</a>
+                {/* <Link to="/Resume" className={currentPage === '/'? 'nav-link active':'nav-link'}>Resume</Link> */}
                 </div>
                 <div>
-                <a href="#">Resume</a>
+                {/* <Link to="/Contact" className={currentPage === '/'? 'nav-link active':'nav-link'}>Contact</Link> */}
                 </div>
             </nav>
         </section>
     );
 }
+
+export default Nav;
